@@ -12,10 +12,10 @@ const myinput2=document.getElementById("myinput2");
 const totalAmount=document.getElementById("total-amt");
 
 let principle=Number(myinput.value);
-let rate=Number(myinput1.value)/100;
+let rate=Number(myinput1.value  / 100);
 let years=Number(myinput2.value);
 
-const result= principle * Math.pow((1 + rate), years);
+const result= (principle * rate * years)/100;
 console.log(result)
 totalAmount.textContent=result.toLocaleString(undefined,{style:"currency",currency:"INR"})
 }
